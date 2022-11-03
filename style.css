@@ -1,0 +1,772 @@
+/*
+    __________  _   _____________
+   / ____/ __ \/ | / /_  __/ ___/
+  / /_  / / / /  |/ / / /  \__ \
+ / __/ / /_/ / /|  / / /  ___/ /
+/_/    \____/_/ |_/ /_/  /____/
+*/
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Sansita+Swashed:wght@300;400;500;600&display=swap');
+
+/*
+    ____  ___    __    _________ ___________
+   / __ )/   |  / /   /  _/ ___// ____/ ___/
+  / __  / /| | / /    / / \__ \/ __/  \__ \
+ / /_/ / ___ |/ /____/ / ___/ / /___ ___/ /
+/_____/_/  |_/_____/___//____/_____//____/
+*/
+html {
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+    cursor: none;
+    overflow-x: hidden;
+    color: white;
+}
+
+body {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    background: #14171A;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    opacity: 0;
+    text-align: center;
+    font-weight: 100;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin: 6rem 0 0 0;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+h3 {
+    margin-left: 5vw;
+    opacity: 0;
+    animation: nav 1.3s ease-in-out 1.2s 1 normal forwards;
+}
+
+h4 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    color: whitesmoke;
+    width: 100%;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin: auto;
+    width: 90vw;
+}
+
+input {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 2rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    transition: 0.4s;
+    cursor: none;
+}
+
+input:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+
+input[type=button] {
+    font-size: 1.1rem;
+    padding-top: 0.3rem;
+    color: white;
+    opacity: 0;
+    position: relative;
+    animation: reseaux 0.3s ease-out 1.8s 1 normal forwards;
+}
+
+textarea {
+    margin: auto;
+    padding: 1rem;
+    resize: none;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 2rem;
+    color: white;
+    cursor: none;
+    margin: 2rem;
+    width: 66vw;
+    height: 28vh;
+    transition: 0.4s;
+    outline: none;
+    opacity: 0;
+    position: relative;
+    animation: reseaux 0.3s ease-out 1.6s 1 normal forwards;
+}
+
+textarea:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+textarea:focus {
+    box-shadow: inset 0 0 30px black;
+}
+
+a {
+    color: white;
+    cursor: none;
+    transition: 0.4s;
+}
+
+a:hover {
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    transition: 0.4s;
+}
+
+span {
+    opacity: 0;
+    position: relative;
+    animation: reseaux 0.3s ease-out 1.4s 1 normal forwards;
+}
+
+/*
+ _       ____________  __ __ _______________
+| |     / / ____/ __ )/ //_//  _/_  __/ ___/
+| | /| / / __/ / __  / ,<   / /  / /  \__ \
+| |/ |/ / /___/ /_/ / /| |_/ /  / /  ___/ /
+|__/|__/_____/_____/_/ |_/___/ /_/  /____/
+
+*/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: ghostwhite;
+    border: 7px solid #14171A;
+    border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+    border: 5px solid #14171A;
+}
+
+/*
+   ________    ___   __________ ___________
+  / ____/ /   /   | / ___/ ___// ____/ ___/
+ / /   / /   / /| | \__ \\__ \/ __/  \__ \
+/ /___/ /___/ ___ |___/ /__/ / /___ ___/ /
+\____/_____/_/  |_/____/____/_____//____/
+
+*/
+.white {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10rem;
+    padding: 0.3rem 0.6rem 0.4rem 0.6rem;
+    font-size: 0.8rem;
+}
+
+.white:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexline {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.flexlineleft {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    margin: auto;
+}
+
+.flexlineleft2 {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.dklogo {
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 45px;
+    margin-left: 5px;
+    z-index: 9;
+    animation: dk 1s ease-in-out 0.1s 1 normal forwards;
+}
+
+.dawson {
+    color: #14171A;
+    z-index: 1;
+    position: absolute;
+    top: 9px;
+    font-size: 0.8rem;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    transform-origin: left;
+    animation: dawson 1.3s ease-in-out 0.2s 1 normal forwards;
+}
+
+.navbar {
+    opacity: 0;
+    box-shadow: 0px 0px 25px 4px black;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'MuseoModerno', cursive;
+    border-radius: 2rem;
+    width: 128px;
+    height: 6px;
+    font-size: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    transition: 0.4s ease-in-out;
+    animation: navbar 1.3s ease-in-out 1.5s 1 normal forwards;
+}
+
+.contour{
+    display: flex;
+    margin: auto;
+    width: 170px;
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.contour:hover {
+    width: 32rem;
+    transition: 0.4s ease-in-out;
+}
+
+.contour:hover .navbar {
+    width: 30rem;
+    height: 2.6rem;
+    font-size: 1.3rem;
+    transition: 0.4s ease-in-out;
+}
+
+.navbar span {
+    color: #14171A;
+    font-weight: 400;
+    line-height: 2;
+    transition: 0.2s ease-in;
+}
+
+.navbar span:hover {
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    transition: 0.3s;
+}
+
+.navdiv {
+    z-index: 9;
+    position: fixed;
+    width: 100vw;
+    top: 10px;
+}
+
+.landingtext {
+    opacity: 0;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 600;
+    margin-top: 4.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    animation: nav 1.3s ease-in-out 0.3s 1 normal forwards;
+    transition: 1s ease-in-out;
+}
+
+.contactitre {
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 700;
+    margin-top: 5rem;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    animation: nav 1.3s ease-in-out 0.3s 1 normal forwards;
+    transition: 1s ease-in-out;
+}
+
+.landingtext:hover,
+.contactitre:hover {
+    text-shadow: 0 0 22px white;
+}
+
+.copyright {
+    font-size: 0.6rem;
+}
+
+.memoji {
+    width: 220px;
+    transform: translateY(30px);
+}
+
+.scrolldown {
+    font-size: 0.7rem;
+    animation: animate2 2s infinite;
+}
+
+.down {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.black {
+    width: 40px !important;
+    height: 40px !important;
+    filter: invert(100%);
+    border: none !important;
+    transition: 1s;
+}
+
+.curseurinput {
+    border: none;
+    transform: scaleX(0.3) scaleY(0.6) !important;
+    border-radius: 0 !important;
+    background: white;
+    width: 0 !important;
+    transition: width 0.4s, border-radius 1s, transform 0.4s !important;
+}
+
+.icon {
+    width: 24px;
+    padding-bottom: 1rem;
+}
+
+.contactinfo {
+    width: 70vw;
+    margin: 3rem auto 0 auto;
+    padding: 0.3rem;
+    border-radius: 50rem;
+}
+
+.avertissement {
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    background: #14171A;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 9;
+    box-shadow: 0 0 40px black;
+    color: white;
+    transition: 0.5s;
+}
+
+.apparait {
+    opacity: 1;
+    transition: 0.5s;
+    pointer-events: unset;
+}
+
+.disparait {
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.msg {
+    opacity: 0;
+    background: white;
+    width: 70vw;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 1.3rem;
+    color: black;
+    padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+    position: relative;
+    word-wrap: break-word;
+    margin-left: -webkit-calc(5vw + 55px);
+    margin-left: -moz-calc(5vw + 55px);
+    margin-left: calc(5vw + 55px);
+    transform-origin: bottom left;
+    animation: msganim 0.5s ease-out 1.4s 1 normal forwards;
+}
+
+.msg:before {
+    content: "";
+    border-bottom-right-radius: 0.8rem 0.7rem;
+    border-left: 1rem solid white;
+    left: -0.35rem;
+    transform: translate(0, -0.2rem);
+    bottom: -0.1rem;
+    height: 2rem;
+    position: absolute;
+}
+
+.msg:after {
+    content: "";
+    bottom: -0.1rem;
+    height: 3.5rem;
+    position: absolute;
+    background-color: #14171A;
+    border-bottom-right-radius: 0.5rem;
+    left: 21px;
+    transform: translate(-30.5px, -3px);
+    width: 10px;
+}
+
+.pp {
+    position: absolute;
+    bottom: 0px;
+    left: 5vw;
+    opacity: 0;
+    transform-origin: bottom left;
+    animation: msganim 0.4s ease-in-out 1.2s 1 normal forwards;
+}
+
+.reseaux {
+    margin-top: 4rem;
+    width: 100vw;
+}
+
+.reseaux img {
+    width: 25px;
+    transition: 0.3s;
+}
+
+.reseaux img:hover {
+    transform: scale(1.4);
+    transition: 0.3s;
+}
+
+.competences {
+    margin-top: 3rem;
+}
+
+.trucs {
+    border: 2px solid white;
+    border-radius: 2rem;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.un {
+    opacity: 0;
+    animation: comp 0.3s ease-out 1.8s 1 normal forwards;
+}
+
+.deux {
+    opacity: 0;
+    animation: comp 0.3s ease-out 2s 1 normal forwards;
+}
+
+.trois {
+    opacity: 0;
+    animation: comp 0.3s ease-out 2.2s 1 normal forwards;
+}
+
+.quatre {
+    opacity: 0;
+    animation: comp 0.3s ease-out 2.4s 1 normal forwards;
+}
+
+.cinq {
+    opacity: 0;
+    animation: comp 0.3s ease-out 2.6s 1 normal forwards;
+}
+
+.six {
+    opacity: 0;
+    animation: comp 0.3s ease-out 2.8s 1 normal forwards;
+}
+
+.sept {
+    opacity: 0;
+    animation: comp 0.3s ease-out 3s 1 normal forwards;
+}
+
+.huit {
+    opacity: 0;
+    animation: comp 0.3s ease-out 3.2s 1 normal forwards;
+}
+
+.twitter {
+    position: relative;
+    opacity: 0;
+    animation: reseaux 0.3s ease-out 3.6s 1 normal forwards;
+}
+
+.behance {
+    position: relative;
+    opacity: 0;
+    animation: reseaux 0.3s ease-out 3.8s 1 normal forwards;
+}
+
+
+.linkedin {
+    position: relative;
+    opacity: 0;
+    animation: reseaux 0.3s ease-out 4s 1 normal forwards;
+}
+
+
+/*
+    ________ _
+   /  _/ __ ( )_____
+   / // / / /// ___/
+ _/ // /_/ / (__  )
+/___/_____/ /____/
+
+*/
+#loading {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: #14171A;
+    transition: 1s ease-in-out;
+    pointer-events: none;
+}
+
+#curseur {
+    z-index: 99;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 3px solid whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    backdrop-filter: grayscale();
+    transition: border 0.5s, height 0.4s, width 0.4s, border-radius 0.2s, transform 0.4s;
+}
+
+#download {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: comp 0.3s ease-out 3.4s 1 normal forwards;
+}
+
+#tel,
+#mail {
+    font-size: 0.7rem;
+    opacity: 0;
+    position: relative;
+    animation: reseaux 0.3s ease-out 2s 1 normal forwards;
+
+}
+
+/*
+   __________  ____  __________            __________  __    __    ______
+  / ____/ __ \/ __ \/  _/ ____/           / ____/ __ \/ /   / /   / ____/
+ / /   / / / / /_/ // // __/    ______   / /   / / / / /   / /   / __/
+/ /___/ /_/ / ____// // /___   /_____/  / /___/ /_/ / /___/ /___/ /___
+\____/\____/_/   /___/_____/            \____/\____/_____/_____/_____/
+
+*/
+
+/* Typing Effect */
+.container {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p {
+    letter-spacing: 1px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container p span.typed-text {
+    color: white;
+}
+
+.container p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+.container p span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+
+    49% {
+        background-color: #ccc;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #ccc;
+    }
+}
+
+/* 3D Hover Effect */
+#tilt {
+    display: block;
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    transition: box-shadow 0.1s, transform 0.1s;
+}
+
+/*
+    ___    _   ________  ______  ______________  _   _______
+   /   |  / | / /  _/  |/  /   |/_  __/  _/ __ \/ | / / ___/
+  / /| | /  |/ // // /|_/ / /| | / /  / // / / /  |/ /\__ \
+ / ___ |/ /|  // // /  / / ___ |/ / _/ // /_/ / /|  /___/ /
+/_/  |_/_/ |_/___/_/  /_/_/  |_/_/ /___/\____/_/ |_//____/
+
+*/
+@keyframes dawson {
+    from {
+        color: #14171A;
+        transform: scaleX(0);
+    }
+
+    to {
+        color: white;
+        transform: scaleX(1.0);
+        margin-left: 64px;
+    }
+}
+
+@keyframes dk {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}
+
+@keyframes nav {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes contenu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes navbar {
+    0% {
+        background: #14171A;
+        transform: scale(0);
+    }
+
+    50% {
+        background: white;
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        background: white;
+    }
+}
+
+@keyframes msganim {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes comp {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes reseaux {
+    0% {
+        bottom: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}

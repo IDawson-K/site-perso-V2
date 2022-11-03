@@ -1,0 +1,136 @@
+#carousel {
+    width: 100vw;
+    position: relative;
+    top: -230px;
+}
+
+/* hardware accelatator class */
+.trans3d {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform-style: preserve-3d;
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform-style: preserve-3d;
+    -ms-transform: translate3d(0, 0, 0);
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+
+    /*-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility:hidden;
+		backface-visibility:hidden;*/
+}
+
+#contentContainer {
+    position: absolute;
+    margin-left: -500px;
+    left: 50%;
+    top: 50%;
+    width: 1000px;
+    height: 100vh;
+}
+
+#carouselContainer {
+    position: absolute;
+    margin-left: -500px;
+    margin-top: -500px;
+    left: 50%;
+    top: 50%;
+    width: 1000px;
+    height: 1000px;
+}
+
+.carouselItem {
+    width: 320px;
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: -90px;
+    visibility: hidden;
+}
+
+.carouselItemInner {
+    border-radius: 5px;
+    box-shadow: 0 0 20px black;
+    width: 320px;
+    height: 130px;
+    position: absolute;
+    font-size: 72px;
+    background-size: 100% 100%;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: -90px;
+    text-align: center;
+    padding-top: 50px;
+    transition: 0.4s;
+
+}
+
+.carouselItemInner:hover {
+    transform: scale(1.2) !important;
+    outline: 2px solid grey;
+    transition: 0.4s;
+}
+
+.img1 {
+    background: url(IMG/03.png);
+    background-size: 100% 100%;
+}
+
+.img2 {
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/99cada144910577.629512927f664.png);
+    background-size: 100% 100%;
+}
+
+.img3 {
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/f7e96e144910577.629512927fc00.png);
+    background-size: 100% 100%;
+}
+
+.img4 {
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/30dfa0144914907.629522156d6d4.png);
+    background-size: 100% 100%;
+}
+
+.img5 {
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/159ffc144814733.629368c5285c7.png);
+    background-size: 100% 100%;
+}
+
+.img6 {
+    background: url(IMG/01.png);
+    background-size: 100% 100%;
+}
+
+.img7 {
+    background: url(https://cdn.discordapp.com/attachments/963050390075629599/1036706206695297044/tanjiro.png);
+    background-size: 100% 100%;
+}
+
+.img8 {
+    background: url(IMG/2022-10-31%2019_24_27-Dawson%20Kramer%20on%20Behance%20et%2065%20pages%20de%20plus%20-%20Personnel%20%E2%80%93%20Microsoft%E2%80%8B%20Edge.png);
+    background-size: 100% 100%;
+}
+
+.img9 {
+    background: url(IMG/2022-10-31%2019_27_51-Dawson%20Kramer%20on%20Behance%20et%2065%20pages%20de%20plus%20-%20Personnel%20%E2%80%93%20Microsoft%E2%80%8B%20Edge.png);
+    background-size: 100% 100%;
+}
+
+.img10 {
+    background: url(IMG/2022-10-31%2019_32_14-Dawson%20Kramer%20on%20Behance%20et%2065%20pages%20de%20plus%20-%20Personnel%20%E2%80%93%20Microsoft%E2%80%8B%20Edge.png);
+    background-size: 100% 100%;
+}
+
+.img11 {
+    background: url(IMG/02.png);
+    background-size: 100% 100%;
+}
+
+.img12 {
+    background: url(IMG/2022-10-31%2020_04_03-Dawson%20Kramer%20on%20Behance%20et%2069%20pages%20de%20plus%20-%20Personnel%20%E2%80%93%20Microsoft%E2%80%8B%20Edge.png);
+    background-size: 100% 100%;
+}
